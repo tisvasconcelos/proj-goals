@@ -22,6 +22,7 @@ YUI().use('node', 'event', function (Y) {
 			goalsCount--;
 		}else{
 			this.previous('input').set('value', "");
+			localStorage.removeItem('goals');
 			goalsCount = 1;
 		}
 	}, Y.one('body'), '.btn-remove');
@@ -56,7 +57,15 @@ YUI().use('node', 'event', function (Y) {
 
 			if(ls.itens.length > 0){
 				localStorage.setItem('goals',JSON.stringify(ls));
+				goals.alert('Their goals were saved successfully','success');
+			}else{
+				goals.alert('Their goals were empty','error');
 			}
+		},
+		alert: function(message,type){
+			Y.all('.alert').remove();
+			var alert = Y.Node.create('<div class="alert alert-'+type+'">'+message+'</div>');
+			Y.one('legend').insert(alert,'after');
 		},
 		add: function(){
 			var goal = Y.Node.create('<div class="input-append"><input class="input-xxlarge" name="goal[]" type="text" placeholder="type your goal..." /><button class="btn btn-danger btn-remove" type="button" title="Remove"><i class="icon-remove icon-white"></i></button></div>');
