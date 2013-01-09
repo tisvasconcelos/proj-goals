@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Goals</title>
+	<link rel="stylesheet" href="style/style.css" />
+</head>
+<body>
+	<section class="tasks">
+		<form action="#" method="post">
+			<fieldset>
+				<legend>Goals</legend>
+
+				<div class="input-append">
+					<input class="input-xxlarge" name="goal[]" type="text" placeholder="type your goal..." />
+					<button class="btn btn-danger btn-remove" type="button" title="Remove">
+						<i class="icon-remove icon-white"></i>
+					</button>
+				</div>
+
+				<button id="add-goal" class="btn btn-info" type="button">Add goal</button>
+				<button id="remove-goals" class="btn btn-danger" type="button">Remove goals</button>
+				
+				<button id="save-goals" class="btn pull-right btn-success" type="button">Save goals</button>
+
+			</fieldset>
+		</form>
+	</section>
+
+	<script src="javascript/yui.js"></script>
+	<script src="javascript/local-storage.js"></script>
+	<script src="javascript/main.js"></script>
+</body>
+</html>
