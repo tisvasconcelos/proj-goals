@@ -28,6 +28,15 @@
 		<div class="well well-small">
 			Playing a little with <a href="http://yuilibrary.com/" target="_blank">YUI Library</a> and <a href="http://www.html5rocks.com/en/features/storage" target="_blank">localStorage</a>, I created a list of goals or can be used like a task list.
 		</div>
+
+		<script type="text/x-template" id="input-goal-template">
+			<div class="input-append">
+				<input class="input-xxlarge" name="goal[]" type="text" placeholder="type your goal..." />
+				<button class="btn btn-danger btn-remove" type="button" title="Remove">
+					<i class="icon-remove icon-white"></i>
+				</button>
+			</div>
+		</script>
 	</section>
 
 	<script src="javascript/yui.js"></script>

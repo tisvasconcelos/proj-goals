@@ -68,14 +68,16 @@ YUI().use('node', 'event', function (Y) {
 			Y.one('legend').insert(alert,'after');
 		},
 		add: function(){
-			var goal = Y.Node.create('<div class="input-append"><input class="input-xxlarge" name="goal[]" type="text" placeholder="type your goal..." /><button class="btn btn-danger btn-remove" type="button" title="Remove"><i class="icon-remove icon-white"></i></button></div>');
+			var insertAfter, template = Y.one('#input-goal-template').getHTML()
 
 			if(Y.one('.input-append:last-of-type') != null)
-				Y.one('.input-append:last-of-type').insert(goal,'after');
+				insertAfter = '.input-append:last-of-type';
 			else
-				Y.one('legend').insert(goal,'after');
+				insertAfter = 'legend';
 
-			return goal;
+			Y.one(insertAfter).insert(template,'after');
+
+			return Y.one('.input-append:last-of-type');
 		},
 		load: function(){
 			var data = localStorage.getItem('goals');
