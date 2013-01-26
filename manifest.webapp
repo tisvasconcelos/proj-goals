@@ -1,0 +1,11 @@
+{
+	"name":"Goals",
+    	"developer": {
+        	"name":"Goals Demo",
+        	"url":"http://goals.yenilik.com.br"
+    	},
+    	"description":"Goals.",
+    	"icons":{
+			"128":"/images/icon.png"
+    	}
+}
